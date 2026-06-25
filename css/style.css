@@ -1,4 +1,4 @@
-/* Reset CSS cơ bản */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Container dùng chung để canh giữa nội dung */
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -20,7 +20,7 @@ body {
     padding: 0 15px;
 }
 
-/* Định dạng Header */
+
 .site-header {
     background-color: #1a1a1a;
     color: #fff;
@@ -44,7 +44,7 @@ body {
 }
 
 .logo span {
-    color: #ff6600; /* Màu cam thương hiệu */
+    color: #ff6600; 
 }
 
 .main-nav ul {
@@ -66,7 +66,7 @@ body {
     color: #ff6600;
 }
 
-/* Định dạng Vùng Hero / Banner chính */
+
 .hero-section {
     background-color: #333;
     color: #fff;
@@ -98,7 +98,7 @@ body {
     background-color: #e05500;
 }
 
-/* Định dạng các Section chung */
+
 section {
     padding: 60px 0;
     background-color: #fff;
@@ -114,11 +114,66 @@ section h2 {
     position: relative;
 }
 
-/* Định dạng Footer */
-.site-footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+
+.about-section {
+    background-color: #fff;
 }
+
+
+.about-lead {
+    text-align: center;
+    max-width: 800px;
+    margin: -20px auto 40px auto;
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.about-box {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 3px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+
+.about-box:hover {
+    transform: translateY(-8px);
+    border-bottom-color: #ff6600; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+
+.about-box .about-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+
+.about-box h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+
+.about-box p {
+    font-size: 14.5px;
+    color: #666;
+    line-height: 1.6;
+}
+
