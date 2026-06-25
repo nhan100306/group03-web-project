@@ -1,271 +1,268 @@
-
-.card-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 36px;
-}
-
-.activity-card {
-    padding: 28px;
-    border-radius: 20px;
-    background: #ffffff;
-    border: 1px solid #dbeafe;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-    transition: 0.3s;
-}
-
-
-.activity-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 36px rgba(37, 99, 235, 0.18);
-}
-
-.activity-card h3 {
-    color: #1d4ed8;
-    margin-bottom: 12px;
-}
-
-.activity-card p {
-    color: #475569;
+/* ==========================================================================
+   1. RESET & INITIAL STYLES
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #000000;
-    background-color: #f4f4f4;
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa;
 }
-
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
+.section {
+    padding: 80px 0;
+}
 
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    color: #222;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff6600; /* Màu cam chủ đạo Cyber Orange */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.section-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
 .site-header {
-    background-color: #1559ee;
-    color: #fff;
-    padding: 15px 0;
+    background-color: #111111;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.header-container {
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .logo {
+    font-size: 1.6rem;
     color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.logo span {
-
-    color: #ff6600; 
-
-    color: #ff6600;
-
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-.main-nav ul li {
-    margin-left: 20px;
-}
-
-.main-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.main-nav ul li a:hover {
+.logo::after {
+    content: ' .';
     color: #ff6600;
 }
 
+.navbar a {
+    color: #eeeeee;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-.hero-section {
-    background-color: #abeafd;
-    color: #1e293b;
-    padding: 100px 0;
+.navbar a:hover {
+    color: #ff6600;
+}
+
+/* ==========================================================================
+   3. HERO / BANNER SECTION
+   ========================================================================== */
+.hero {
+    background: linear-gradient(135deg, #1f1f1f 0%, #111111 100%);
+    color: #fff;
+    padding: 120px 0;
     text-align: center;
 }
 
-.hero-container h1 {
-    font-size: 40px;
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    display: inline-block;
+    background-color: rgba(255, 102, 0, 0.2);
+    color: #ff6600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.hero-container p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-.btn {
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 35px;
+}
+
+.btn-primary {
     display: inline-block;
     background-color: #ff6600;
     color: #fff;
-    padding: 10px 20px;
     text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
 }
 
-.btn:hover {
+.btn-primary:hover {
     background-color: #e05500;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
 }
 
+/* ==========================================================================
+   4. CARD GRID (Giới thiệu & Hoạt động)
+   ========================================================================== */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
-section {
-    padding: 60px 0;
+.activity-card {
     background-color: #fff;
+    padding: 35px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
 }
 
-section:nth-child(even) {
-    background-color: #f9f9f9;
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    border-top: 4px solid #ff6600;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
+.activity-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #222;
 }
 
+.activity-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
 
+/* Tinh chỉnh riêng cho Section Giới thiệu */
 .about-section {
     background-color: #fff;
 }
 
-
-.about-lead {
+.about-section .activity-card {
+    background-color: #f8f9fa;
     text-align: center;
-    max-width: 800px;
-    margin: -20px auto 40px auto;
-    font-size: 17px;
-    color: #555;
-    line-height: 1.8;
 }
 
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 20px;
-}
-
-
-.about-box {
-    background-color: #f9f9f9;
-    padding: 30px 20px;
-    border-radius: 8px;
-    text-align: center;
-
-    border-bottom: 3px solid #e0e0e0;
-    transition: all 0.3s ease;
-}
-
-
-.about-box:hover {
-    transform: translateY(-8px);
-    border-bottom-color: #ff6600; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    background-color: #fff;
-}
-
-
-.about-box .about-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    display: inline-block;
-}
-
-
-.about-box h3 {
-    font-size: 20px;
-    color: #1a1a1a;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-
-.about-box p {
-    font-size: 14.5px;
-    color: #666;
-    line-height: 1.6;
-}
-
-
-    padding: 20px 0;
-    margin-top: 40px;
-}
-/* Styling cho Form Liên hệ */
+/* ==========================================================================
+   5. CONTACT FORM
+   ========================================================================== */
 .contact-section {
-    padding: 60px 20px;
-    background: #f8fafc;
+    background-color: #f1f3f5;
 }
 
-.contact-box {
+.contact-form {
+    background-color: #fff;
     max-width: 600px;
-    margin: 0 auto; /* Căn giữa */
-    background: #ffffff;
+    margin: 0 auto;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.form-group { margin-bottom: 20px; text-align: left; }
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #cbd5e1;
     border-radius: 8px;
-    background: #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.submit-btn {
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #2563eb, #4f46e5);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
 }
 
-.submit-btn:hover { transform: scale(1.02); }
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff6600;
+}
 
-/* Styling cho Footer */
+/* ==========================================================================
+   6. SITE FOOTER
+   ========================================================================== */
 .site-footer {
-    background: #0f172a;
-    color: #e2e8f0;
-    padding: 40px 20px;
+    background-color: #111111;
+    color: #fff;
     text-align: center;
+    padding: 40px 0;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Căn giữa nội dung footer
+.site-footer h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
+.site-footer p {
+    color: #aaa;
+    font-size: 0.95rem;
+}

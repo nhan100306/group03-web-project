@@ -1,25 +1,3 @@
-
-<section id="services" class="section services-section">
-    <div class="container">
-        <h2 class="section-title">Our Activities</h2>
-        <div class="card-list">
-            <div class="activity-card">
-                <h3>HTML CSS Workshop</h3>
-                <p>Learn how to build a simple web layout.</p>
-            </div>
-            
-            <div class="activity-card">
-                <h3>GitHub Practice</h3>
-                <p>Practice branch, commit, pull request and merge.</p>
-            </div>
-            
-            <div class="activity-card">
-                <h3>Mini Project</h3>
-                <p>Build a small website and present it in class.</p>
-            </div>
-        </div>
-    </div>
-</section>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -31,105 +9,112 @@
 <body>
 
     <header class="site-header">
-        <div class="container header-container">
-            <a href="#" class="logo">IT student<span>Club</span></a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home">Trang chủ</a></li>
-                    <li><a href="#about">Giới thiệu</a></li>
-                    <li><a href="#services">Dịch vụ</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
+        <div class="container header-wrapper">
+            <h1 class="logo">IT Student Club</h1>
+            <nav class="navbar">
+                <a href="#home">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#services">Hoạt động</a>
+                <a href="#contact">Liên hệ</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="container hero-container">
-                <h1>Chào mừng đến với Website Nhóm 03</h1>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <span class="hero-label">Web Project</span>
+                <h2>Chào mừng đến với Website Nhóm 03</h2>
                 <p>Đây là dự án thực hành HTML, CSS, JS và làm việc nhóm với GitHub Workflow.</p>
-                <a href="#about" class="btn">Khám phá ngay</a>
+                <a href="#services" class="btn-primary">Khám phá ngay</a>
             </div>
         </section>
 
-        <section id="about" class="about-section">
+        <section id="about" class="section about-section">
             <div class="container">
-                <h2>Giới thiệu câu lạc bộ</h2>
-                <p class="about-lead">
+                <h2 class="section-title">Giới thiệu câu lạc bộ</h2>
+                <p class="section-text">
                     IT Student Club (Dự án nhóm 03) là môi trường học tập, kết nối và sáng tạo dành riêng cho những bạn trẻ đam mê Công nghệ thông tin. Chúng tôi cùng nhau chinh phục thế giới code và xây dựng tương lai số.
                 </p>
                 
-                <div class="about-grid">
-                    <div class="about-box">
-                        <div class="about-icon">🚀</div>
+                <div class="card-list" style="margin-top: 40px;">
+                    <div class="activity-card">
+                        <div class="about-icon" style="font-size: 2rem; margin-bottom: 10px;">🚀</div>
                         <h3>Sứ mệnh</h3>
                         <p>Xây dựng cộng đồng công nghệ năng động, giúp sinh viên trau dồi kiến thức cốt lõi, tiếp cận công nghệ mới và rèn luyện kỹ năng làm việc dự án thực tế.</p>
                     </div>
                     
-                    <div class="about-box">
-                        <div class="about-icon">💻</div>
+                    <div class="activity-card">
+                        <div class="about-icon" style="font-size: 2rem; margin-bottom: 10px;">💻</div>
                         <h3>Hoạt động</h3>
                         <p>Tổ chức các buổi chia sẻ học thuật (Tech Talk), các nhóm nghiên cứu lập trình Web/App, và hỗ trợ nhau hoàn thành các đồ án, bài tập lớn trên lớp.</p>
                     </div>
                     
-                    <div class="about-box">
-                        <div class="about-icon">🤝</div>
+                    <div class="activity-card">
+                        <div class="about-icon" style="font-size: 2rem; margin-bottom: 10px;">🤝</div>
                         <h3>Giá trị</h3>
                         <p>Đoàn kết, sẻ chia và không ngừng sáng tạo. Tại đây, mọi ý tưởng công nghệ của bạn đều được lắng nghe và có cơ hội trở thành sản phẩm thực tế.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="services" class="services-section">
+
+        <section id="services" class="section services-section">
             <div class="container">
-                <h2>Dịch vụ / Tính năng</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Tính năng 1</h3>
-                        <p>Mô tả ngắn gọn về tính năng hoặc dịch vụ số 1.</p>
+                <h2 class="section-title">Our Activities</h2>
+                <div class="card-list">
+                    <div class="activity-card">
+                        <h3>HTML CSS Workshop</h3>
+                        <p>Learn how to build a simple web layout.</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Tính năng 2</h3>
-                        <p>Mô tả ngắn gọn về tính năng hoặc dịch vụ số 2.</p>
+                    
+                    <div class="activity-card">
+                        <h3>GitHub Practice</h3>
+                        <p>Practice branch, commit, pull request and merge.</p>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <h3>Mini Project</h3>
+                        <p>Build a small website and present it in class.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-    <div class="container">
-        <div class="contact-box">
-            <h2>Liên hệ với chúng tôi</h2>
-            <p>Bạn có thắc mắc? Hãy gửi tin nhắn cho chúng tôi!</p>
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Họ và tên" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" rows="4" placeholder="Nội dung" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Gửi yêu cầu</button>
-            </form>
-        </div>
-    </div>
-</section>
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Liên hệ với chúng tôi</h2>
+                <p class="section-text">Bạn có thắc mắc? Hãy gửi tin nhắn cho chúng tôi!</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" placeholder="Họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" rows="4" placeholder="Nội dung" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="border: none; cursor: pointer; width: 100%;">Gửi yêu cầu</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
-    <div class="container footer-content">
-        <h3>Câu lạc bộ Lập trình IT - GROUP 03</h3>
-        <p>Phát triển kỹ năng - Kết nối đam mê công nghệ</p>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Bản quyền thuộc về Nhóm 03 | Năm học 2025-2026</p>
+        <div class="container">
+            <h3>Câu lạc bộ Lập trình IT - GROUP 03</h3>
+            <p>Phát triển kỹ năng - Kết nối đam mê công nghệ</p>
+            <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">
+                &copy; 2026 Bản quyền thuộc về Nhóm 03 | Năm học 2025-2026
+            </p>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
 </html>
-
