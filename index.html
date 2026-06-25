@@ -1,3 +1,25 @@
+
+<section id="services" class="section services-section">
+    <div class="container">
+        <h2 class="section-title">Our Activities</h2>
+        <div class="card-list">
+            <div class="activity-card">
+                <h3>HTML CSS Workshop</h3>
+                <p>Learn how to build a simple web layout.</p>
+            </div>
+            
+            <div class="activity-card">
+                <h3>GitHub Practice</h3>
+                <p>Practice branch, commit, pull request and merge.</p>
+            </div>
+            
+            <div class="activity-card">
+                <h3>Mini Project</h3>
+                <p>Build a small website and present it in class.</p>
+            </div>
+        </div>
+    </div>
+</section>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -76,19 +98,38 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Liên hệ với chúng tôi</h2>
-                <p>Vui lòng điền thông tin bên dưới để gửi phản hồi cho nhóm.</p>
-            </div>
-        </section>
+    <div class="container">
+        <div class="contact-box">
+            <h2>Liên hệ với chúng tôi</h2>
+            <p>Bạn có thắc mắc? Hãy gửi tin nhắn cho chúng tôi!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="4" placeholder="Nội dung" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Gửi yêu cầu</button>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 GROUP03-WEB-PROJECT. Bảo lưu mọi quyền.</p>
+    <div class="container footer-content">
+        <h3>Câu lạc bộ Lập trình IT - GROUP 03</h3>
+        <p>Phát triển kỹ năng - Kết nối đam mê công nghệ</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bản quyền thuộc về Nhóm 03 | Năm học 2025-2026</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="js/main.js"></script>
 </body>
 </html>
+
